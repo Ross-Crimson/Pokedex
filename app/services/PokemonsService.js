@@ -18,11 +18,10 @@ class PokemonsService {
     }
 
     async GetPokemonByName(pokeName) {
-        console.log(pokeName)
         const response = await pokeApi.get(`/${pokeName}`)
         const newPoke = new Pokemon(response.data)
         AppState.activePokemon = newPoke
-        console.log(newPoke)
+        console.log(AppState.activePokemon)
     }
 }
 

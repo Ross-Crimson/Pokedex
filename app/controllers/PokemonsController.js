@@ -37,7 +37,7 @@ export class PokemonsController {
     DrawPokemons() {
         let pokeHTML = ''
         AppState.pokemons.forEach(pokemon => pokeHTML += Pokemon.pokemonListTemplate(pokemon.name))
-        //console.log(AppState.pokemons)
+
         setHTML('pokemon-list-view', pokeHTML)
     }
 

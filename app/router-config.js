@@ -1,5 +1,6 @@
 import { AccountController } from "./controllers/AccountController.js";
 import { PokemonsController } from "./controllers/PokemonsController.js";
+import { sbPokemonsController } from "./controllers/sbPokemonsController.js";
 import { AuthGuard } from "./services/AuthService.js";
 import { Router } from "./utils/Router.js";
 
@@ -7,7 +8,7 @@ import { Router } from "./utils/Router.js";
 export const router = new Router([
   {
     path: '',
-    controllers: [PokemonsController],
+    controllers: [PokemonsController, sbPokemonsController],
     view: `app/views/PokemonView.html`
   },
   {
